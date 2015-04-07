@@ -2,4 +2,17 @@ h1 = pluralize(@companies.size, 'Company')
 
 ul
   - @companies.each do |company|
-    li =company
+    article
+      header
+        h2 =company.name
+      p = truncate(company.description, length: 40, separator: ' ')
+      table
+        tr
+          th Website:
+          td =company.website_url
+        tr
+          th Founded:
+          td =company.founded_in
+        tr
+          th Staff:
+          td =company.staff
