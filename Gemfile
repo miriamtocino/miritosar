@@ -41,5 +41,13 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Miriam : Testing gems
+  gem "minitest"
+  gem "rspec-rails",  "~> 2.14.2"       # same version as Springest
 end
 
+group :test do
+  # Miriam : Testing gems
+  gem "capybara", "2.1.0"               # same version as Springest
+end
