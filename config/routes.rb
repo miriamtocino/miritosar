@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  get "companies" => "companies#index"
+  root "companies#index"
+  resources :companies
 end
