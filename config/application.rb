@@ -22,5 +22,10 @@ module Miritosar
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Miriam : small tweak that will help a bit later on in the course (Pragmatic Studio)
+    console do
+      ActiveRecord::Base.connection
+    end
   end
 end
