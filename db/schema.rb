@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407151651) do
+ActiveRecord::Schema.define(version: 20150408102101) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
-    t.string   "website_url"
+    t.string   "website"
     t.integer  "staff"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.text     "description"
     t.date     "founded_in"
+    t.string   "logo"
   end
 
 end

@@ -9,7 +9,7 @@ describe 'Viewing an individual company, companies/:id' do
 
     expect(page).to have_text(company.name)
     expect(page).to have_text(company.description[0..9])
-    expect(page).to have_text(company.website_url)
+    expect(page).to have_text(company.website)
     expect(page).to have_text(company.staff)
     expect(page).to have_text(company.founded_in)
   end
