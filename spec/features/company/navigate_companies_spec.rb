@@ -5,7 +5,7 @@ describe "Navigating companies" do
     company = Company.create(company_attributes)
 
     visit company_url(company)
-    click_link "All Companies"
+    click_link "Back"
 
     expect(current_path).to eq(companies_path)
   end
