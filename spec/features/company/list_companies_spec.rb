@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'companies/' do
+describe 'Viewing a list of companies, companies/' do
 
   it 'shows the companies' do
     company1 = Company.create(name: "Company 1",
@@ -27,6 +27,7 @@ describe 'companies/' do
 
     expect(page).to have_text(company1.name)
     expect(page).to have_text(company1.description[0..9])
+    expect(page).to have_text(company1.website_url)
     expect(page).to have_text(company1.staff)
     expect(page).to have_text(company1.founded_in)
 
