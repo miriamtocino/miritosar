@@ -3,8 +3,10 @@ h1= pluralize(@companies.size, 'Company')
 - @companies.each do |company|
   article
     header
-      h2= company.name
+      h2= link_to company.name, company_path(company)
+
     p= truncate(company.description, length: 40, separator: ' ')
+
     table
       tr
         th Website:

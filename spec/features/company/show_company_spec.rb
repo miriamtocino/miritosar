@@ -3,11 +3,7 @@ require 'spec_helper'
 describe 'Viewing an individual company, companies/:id' do
 
   it 'shows the company attributes' do
-    company = Company.create(name: "Company 1",
-                      description: "This is the description of the company 1.",
-                      website_url: "www.company1.com",
-                      staff: 3,
-                      founded_in: 2010)
+    company = Company.create(company_attributes)
 
     visit company_url(company)
 
