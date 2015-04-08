@@ -1,29 +1,11 @@
-h1 Listing companies
-
-table
-  thead
-    tr
-      th Name
-      th Website
-      th Logo
-      th Description
-      th Founded in
-      th Staff
-      th
-      th
-
-  tbody
-    - @companies.each do |company|
-      tr
-        td = link_to company.name, company
-        td = company.website
-        td = company.logo
-        td = company.description
-        td = company.founded_in
-        td = company.staff
-        td = link_to 'Edit', edit_company_path(company)
-        td = link_to 'Destroy', company, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
+- @companies.each do |company|
+  .mod-company
+    = image_for(company)
+    h3 = link_to company.name, company
+    h5 = link_to website_for(company.website), company.website
+    h5 = pluralize(company.staff, 'employee')
+    p = company.description
+    td = link_to 'Edit', edit_company_path(company)
+    td = link_to 'Destroy', company, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 = link_to 'New Company', new_company_path

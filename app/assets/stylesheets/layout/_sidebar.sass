@@ -1,0 +1,17 @@
+.sidebar
+  @include breakpoint($breakpoint-s)
+    @include layout($s-layout)
+
+    display: none
+
+  @include breakpoint($breakpoint-m)
+    @include layout($m-layout)
+    @include span(first 2)
+
+    display: block
+    background-color: $color-primary
+    height: 200px
+
+  @include breakpoint($breakpoint-l)
+    @include layout($l-layout)
+    @include span(first 4)

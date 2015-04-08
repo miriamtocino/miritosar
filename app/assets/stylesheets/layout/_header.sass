@@ -1,0 +1,15 @@
+.header
+  @include breakpoint($breakpoint-s)
+    @include layout($s-layout)
+    @include container(full)
+
+    background-color: $color-primary
+    border-bottom: 2px solid $white
+    height: 20px
+    margin-bottom: 4em
+
+  @include breakpoint($breakpoint-m)
+    @include layout($m-layout)
+
+  @include breakpoint($breakpoint-l)
+    @include layout($l-layout)

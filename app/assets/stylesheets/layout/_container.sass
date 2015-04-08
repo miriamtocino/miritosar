@@ -1,0 +1,10 @@
+.container
+  @include breakpoint($breakpoint-s)
+    @include layout($s-layout)
+    @include container(full)
+
+  @include breakpoint($breakpoint-m)
+    @include layout($m-layout)
+
+  @include breakpoint($breakpoint-l)
+    @include layout($l-layout)

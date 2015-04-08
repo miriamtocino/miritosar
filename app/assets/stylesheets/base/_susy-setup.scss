@@ -1,7 +1,3 @@
-/*------------------------------------*\
-    SUSY SET-UP
-\*------------------------------------*/
-
 $s-layout: (
   container-position: center,
   columns: 1,
@@ -14,7 +10,7 @@ $m-layout: (
   container: auto,
   container-position: center,
   columns: 8,
-  gutters: 1/4,
+  gutters: 3/4,
   gutter-position: inside,
   math: fluid,
 );
@@ -23,7 +19,7 @@ $l-layout: (
   container: auto,
   container-position: center,
   columns: 12,
-  gutters: 1/4,
+  gutters: 1,
   gutter-position: inside,
   math: fluid,
 );
