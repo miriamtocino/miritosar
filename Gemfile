@@ -13,6 +13,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Miriam Gems:
 gem "slim-rails"
+gem 'susy'
+gem 'breakpoint'
 
 group :development, :test do
   gem 'byebug'
