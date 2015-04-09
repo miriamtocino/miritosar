@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Company do
+  subject { create(:company) }
 
   it "requires a name" do
     company = Company.new(name: "")
