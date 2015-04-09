@@ -1,18 +1,49 @@
 .mod-company
   @include breakpoint($breakpoint-s)
     @include layout($s-layout)
+    @include span(100%)
+    background-color: $white
+    margin-bottom: 2em
     padding: 1em
+    padding-right: 2em
+    position: relative
 
-    img
-      margin-left: 0
-      height: 50px
-      width: auto
+    .logo
+      float: left
+      display: inline-block
+      height: 70px
+      position: relative
+      width: 70px
+      line-height: 70px
+      text-align: center
       padding: 10px
+      border: 1px solid $gray-lighter
+
+      img
+        vertical-align: middle
+
+    .company-data
+      float: left
+      display: inline-block
+      margin-left: 1em
+      position: absolute
+      bottom: 1em
+
+      h3
+        font-size: 1.7em
+        margin-bottom: .2em
+        margin-right: 2em
+        a
+          color: $color-primary
+          margin-bottom: 1em
+
+      p
+        color: $gray-light
+        margin: 0
+
 
   @include breakpoint($breakpoint-m)
     @include layout($m-layout)
-    background-color: $white
-    margin-bottom: 2em
 
   @include breakpoint($breakpoint-l)
     @include layout($l-layout)
