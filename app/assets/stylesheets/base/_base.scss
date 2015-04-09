@@ -1,6 +1,16 @@
 // Body reset
 // -------------------------
 
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
 html, body {
     height: 100%;
 }
@@ -111,8 +121,8 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-    margin-top: $line-height-computed;
-    margin-bottom: ($line-height-computed / 2);
+    margin-top: 0;
+    margin-bottom: 0;
 
     small,
     .small {
@@ -126,8 +136,8 @@ h3, .h3 {
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    margin-top: ($line-height-computed / 2);
-    margin-bottom: ($line-height-computed / 2);
+    margin-top: 0;
+    margin-bottom: 0;
 
     small,
     .small {
@@ -145,7 +155,7 @@ h6, .h6 { font-size: $font-size-h6; }
 // Body text
 // -------------------------
 
-p { margin: 0 0 ($line-height-computed / 2); }
+p { margin: 0; }
 
 // Emphasis & misc
 // -------------------------

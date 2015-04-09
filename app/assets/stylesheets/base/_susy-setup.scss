@@ -1,25 +1,28 @@
 $s-layout: (
   container-position: center,
   columns: 1,
-  gutters: 1/4,
-  gutter-position: inside,
+  gutters: .1,
+  gutter-position: after,
   math: fluid,
+  global-box-sizing: border-box
 );
 
 $m-layout: (
   container: auto,
   container-position: center,
   columns: 8,
-  gutters: 3/4,
-  gutter-position: inside,
+  gutters: .5,
+  gutter-position: after,
   math: fluid,
+  global-box-sizing: border-box
 );
 
 $l-layout: (
   container: auto,
   container-position: center,
   columns: 12,
-  gutters: 1,
-  gutter-position: inside,
+  gutters: .5,
+  gutter-position: after,
   math: fluid,
+  global-box-sizing: border-box
 );
