@@ -1,12 +1,15 @@
-.header
+header#page-header
   @include breakpoint($breakpoint-s)
     @include layout($s-layout)
     @include container(full)
 
     background-color: $color-primary
     border-bottom: 2px solid $white
-    height: 20px
     margin-bottom: 4em
+    padding: 1em
+
+    h1
+      color: $white
 
   @include breakpoint($breakpoint-m)
     @include layout($m-layout)
