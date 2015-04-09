@@ -1,24 +1,38 @@
-p
-  strong Name:
-  = @company.name
-p
-  strong Website:
-  = @company.website
-p
-  strong Logo:
-  = @company.logo
-p
-  strong Description:
-  = @company.description
-p
-  strong Founded in:
-  = @company.founded_in
-p
-  strong Staff:
-  = @company.staff
+.mod-company
+  .logo
+    = image_for(@company)
 
-= link_to 'Edit ', edit_company_path(@company)
-'|
-= link_to ' Destroy ', @company, method: :delete, data: { confirm: 'Are you sure?' }
-'|
-= link_to ' Back', companies_path
+  hr
+
+  .company-data
+    h3 = link_to @company.name, @company
+    p = link_to website_for(@company.website), @company.website
+    p = pluralize(@company.staff, 'employee')
+    p = @company.founded_in
+
+    hr
+
+    p = @company.description
+
+  hr
+
+  = link_to 'Edit ', edit_company_path(@company)
+  '|
+  = link_to ' Destroy ', @company, method: :delete, data: { confirm: 'Are you sure?' }
+  '|
+  = link_to ' Back', companies_path
+
+  hr
+
+  h4 Reviews
+
+  - @reviews.each do |review|
+    .mod-review
+      span.review = pluralize(review.stars, 'star')
+      span.user = review.name
+      span.date = time_ago_in_words(review.created_at)
+      p = review.comment
+
+  hr
+
+  = link_to pluralize(@company.reviews.size, "review"), company_reviews_path(@company)

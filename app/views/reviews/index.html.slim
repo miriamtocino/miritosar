@@ -1,27 +1,13 @@
-h1 Listing reviews
+h4 Reviews
+= link_to @company.name, @company
 
-table
-  thead
-    tr
-      th Name
-      th Stars
-      th Comment
-      th Company
-      th
-      th
-      th
+- @reviews.each do |review|
+  .mod-review
+    span.review = pluralize(review.stars, 'star')
+    span.user = review.name
+    span.date = time_ago_in_words(review.created_at)
+    p = review.comment
 
-  tbody
-    - @reviews.each do |review|
-      tr
-        td = review.name
-        td = review.stars
-        td = review.comment
-        td = review.company
-        td = link_to 'Show', review
-        td = link_to 'Edit', edit_review_path(review)
-        td = link_to 'Destroy', review, data: {:confirm => 'Are you sure?'}, :method => :delete
+hr
 
-br
-
-= link_to 'New Review', new_review_path
+= link_to 'Back', @company

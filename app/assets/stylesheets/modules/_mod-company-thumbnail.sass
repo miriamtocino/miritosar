@@ -1,9 +1,16 @@
-.mod-company
+.mod-company-thumbnail
   @include breakpoint($breakpoint-s)
     @include layout($s-layout)
     @include container(full)
+    background-color: $white
+    margin: 1em 0
+    position: relative
+    border: 1px solid $gray-lighter
+    padding: 1em
 
     .logo
+      float: left
+      display: inline-block
       height: 70px
       position: relative
       width: 70px
@@ -16,6 +23,11 @@
         vertical-align: middle
 
     .company-data
+      float: left
+      display: inline-block
+      margin-left: 1em
+      position: absolute
+      bottom: 1em
 
       h3
         font-size: 1.7em
@@ -28,6 +40,7 @@
       p
         color: $gray-light
         margin: 0
+
 
   @include breakpoint($breakpoint-m)
     @include layout($m-layout)

@@ -4,7 +4,8 @@ class ReviewsController < ApplicationController
   # GET /reviews
   # GET /reviews.json
   def index
-    @reviews = Review.all
+    @company = Company.find(params[:company_id])
+    @reviews = @company.reviews
   end
 
   # GET /reviews/1

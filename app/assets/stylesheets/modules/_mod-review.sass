@@ -1,0 +1,16 @@
+.mod-review
+  @include breakpoint($breakpoint-s)
+    @include layout($s-layout)
+    @include container(full)
+    background-color: $color-primary
+    margin: 1em 0
+    padding: 1em
+    color: $white
+
+  @include breakpoint($breakpoint-m)
+    @include layout($m-layout)
+    @include span(6 of 6)
+
+  @include breakpoint($breakpoint-l)
+    @include layout($l-layout)
+    @include span(8 of 8)
