@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "slim-rails"
 gem 'susy'
 gem 'breakpoint'
+gem 'hirb'
 
 group :development, :test do
   gem 'byebug'
