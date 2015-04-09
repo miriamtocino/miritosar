@@ -1,4 +1,8 @@
 class Company < ActiveRecord::Base
+  def self.alphabetically
+    order('name asc')
+  end
+
   def small?
     staff < 15
   end
