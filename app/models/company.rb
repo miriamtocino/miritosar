@@ -1,7 +1,5 @@
 class Company < ActiveRecord::Base
-  def self.alphabetically
-    order('name asc')
-  end
+  default_scope { order('name ASC') }
 
   def small?
     staff < 15
