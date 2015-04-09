@@ -8,3 +8,11 @@ def company_attributes(overrides = {})
     founded_in: 2010
   }.merge(overrides)
 end
+
+def review_attributes(overrides = {})
+  {
+    name: "Roger Ebert",
+    stars: 3,
+    comment: "I laughed, I cried, I spilled my popcorn!"
+  }.merge(overrides)
+end

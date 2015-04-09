@@ -73,4 +73,24 @@ describe Company do
     company = Company.new(company_attributes)
     expect(company.valid?).to eq(true)
   end
+
+  it "has many reviews" do
+    company = Company.new(company_attributes)
+
+    review1 = company.reviews.new(review_attributes)
+    review2 = company.reviews.new(review_attributes)
+
+    expect(company.reviews).to include(review1)
+    expect(company.reviews).to include(review2)
+  end
+
+  it "deletes associated reviews" do
+    company = Company.create(company_attributes)
+
+    company.reviews.create(review_attributes)
+
+    expect {
+      company.destroy
+    }.to change(Review, :count).by(-1)
+  end
 end
