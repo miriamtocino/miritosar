@@ -1,0 +1,5 @@
+.mod-review
+  span.name = review.name
+  span.date = time_ago_in_words(review.created_at)
+  p = pluralize(review.stars, 'star')
+  p = review.comment

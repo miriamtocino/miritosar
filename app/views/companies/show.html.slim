@@ -24,15 +24,15 @@
 
   hr
 
-  h4 Reviews
-
-  - @reviews.each do |review|
-    .mod-review
-      span.review = pluralize(review.stars, 'star')
-      span.user = review.name
-      span.date = time_ago_in_words(review.created_at)
-      p = review.comment
+  = link_to 'Reviews', "#", id: "reviews-link"
 
   hr
 
-  = link_to pluralize(@company.reviews.size, "review"), company_reviews_path(@company)
+  #reviews-section
+    h4 Reviews
+    #reviews
+      == render @reviews
+
+    hr
+
+    == render 'reviews/form'

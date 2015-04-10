@@ -1,21 +1,9 @@
-= form_for @review do |f|
-  - if @review.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:"
-      ul
-        - @review.errors.full_messages.each do |message|
-          li = message
-
+= form_for [@company, @company.reviews.new], remote: true do |f|
   .field
-    = f.label :name
-    = f.text_field :name
+    = f.text_field :name, required: true, placeholder: "Your name"
   .field
     = f.label :stars
-    = f.number_field :stars
+    = f.select :stars, Review::STARS, prompt: "Pick one", required: true
   .field
-    = f.label :comment
-    = f.text_area :comment
-  .field
-    = f.label :company
-    = f.text_field :company
-  .actions = f.submit
+    = f.text_area :comment, cols: 60, placeholder: "Write a review...", required: true
+  .actions = f.submit "Post Review"
