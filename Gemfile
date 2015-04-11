@@ -16,6 +16,7 @@ gem 'slim-rails'                        # slim templates
 gem 'susy'                              # taking care of responsive design
 gem 'breakpoint'                        # taking care of media queries
 gem 'hirb'                              # prettify rails console
+gem 'devise', '~> 3.4.1'
 
 group :development, :test do
   gem 'byebug'

@@ -38,4 +38,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Instructions from Devise
+  config.action_mailer.default_url_options = { host: 'miritosar.dev', port: 3000 }
 end
