@@ -17,7 +17,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review.destroy
     respond_to do |format|
-      format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
+      format.html { redirect_to @company, notice: 'Review was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -25,7 +25,8 @@ class ReviewsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_review
-      @review = Review.find(params[:review_id])
+      @company = Company.find(params[:company_id])
+      @review = @company.reviews.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

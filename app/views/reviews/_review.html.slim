@@ -3,3 +3,4 @@
   span.date = time_ago_in_words(review.created_at)
   p = pluralize(review.stars, 'star')
   p = review.comment
+  = link_to ' Destroy ', company_review_path(@company, review), method: :delete, data: { confirm: 'Are you sure?' }
