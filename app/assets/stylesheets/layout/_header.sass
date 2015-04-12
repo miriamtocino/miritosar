@@ -8,7 +8,19 @@ header#page-header
     margin-bottom: 4em
     padding: 1em
 
-    h1
+    h1, nav
+      display: inline-block
+
+    h1>a
+      color: $white
+
+    nav
+      float: right
+
+      a
+        margin-left: 1em
+
+    a:hover
       color: $white
 
   @include breakpoint($breakpoint-m)

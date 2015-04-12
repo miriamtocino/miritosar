@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :companies do
     resources :reviews
   end
+
+  resources :users
 end

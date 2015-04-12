@@ -1,2 +1,6 @@
 header#page-header
-  h1 Miritosar
+  h1 = link_to 'Miritosar', root_path
+
+  nav
+    = link_to 'Register', new_user_registration_path
+    = link_to 'Sing In', new_user_session_path
