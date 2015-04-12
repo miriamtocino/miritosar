@@ -3,4 +3,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  validates :name, presence: true
+  validates :email, presence: true,
+                    format: /\A\S+@\S+\z/,
+                    uniqueness: { case_sensitive: false }
 end
