@@ -13,4 +13,8 @@ class Company < ActiveRecord::Base
   scope :large, -> { where('staff > 50') }
 
   has_many :reviews, dependent: :destroy
+
+  def average_stars
+    reviews.average(:stars)
+  end
 end

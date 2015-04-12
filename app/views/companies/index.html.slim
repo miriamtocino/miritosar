@@ -6,3 +6,4 @@
       h3 = link_to company.name, company
       p = link_to website_for(company.website), company.website
       p = pluralize(company.staff, 'employee')
+      p = format_average_stars(company)

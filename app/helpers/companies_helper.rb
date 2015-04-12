@@ -9,4 +9,14 @@ module CompaniesHelper
     clean_url = URI.split(website)
     clean_url[2]
   end
+
+  def format_average_stars(company)
+    if company.average_stars.nil?
+      content_tag(:strong, 'No reviews')
+    else
+      # average_stars = "*" * company.average_stars.round
+      # "#{average_stars} (#{pluralize(company.reviews.size, 'review')})" 
+      "#{pluralize(number_with_precision(company.average_stars, precision: 1) , 'star')} (#{pluralize(company.reviews.size, 'review')})"
+    end
+  end
 end
